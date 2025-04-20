@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import MyContext from "../../../context/myContext";
 // import { MdOutlineProductionQuantityLimits } from "react-icons/md";
-import { FaUser, FaCartPlus } from "react-icons/fa";
+// import { FaUser, FaCartPlus } from "react-icons/fa";
 import { AiFillShopping, AiFillPlusCircle, AiFillDelete } from "react-icons/ai";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { Link } from "react-router-dom";
@@ -60,7 +60,8 @@ const DashboardTab = () => {
                   className="font-medium cursor-pointer border-b-2 border-green-500 bg-[#605d5d12] text-green-500 rounded-lg text-xl  hover:shadow-green-700 shadow-[inset_0_0_8px_rgba(0,0,0,0.6)]   px-5 py-1.5 text-center "
                 >
                   <div className="flex gap-2 items-center">
-                    <FaUser /> Users
+                    {/* <FaUser />  */}
+                    Users
                   </div>
                 </button>
               </Tab>
@@ -88,7 +89,8 @@ const DashboardTab = () => {
                   >
                     {" "}
                     <div className="flex gap-2 items-center" onClick={add}>
-                      Add Product <FaCartPlus size={20} />
+                      Add Product 
+                      {/* <FaCartPlus size={20} /> */}
                     </div>
                   </button>
                 </div>
@@ -130,7 +132,7 @@ const DashboardTab = () => {
                     {product.map((item, index) => {
                       const { imageURL, title, price, category, date } = item;
                       return(
-                    <tbody className="">
+                    <tbody key={index} className="">
                       <tr
                         className="bg-gray-50 border-b  dark:border-gray-700"
                         style={{
@@ -245,7 +247,7 @@ const DashboardTab = () => {
                 
                   {order.map((allOrder, index) => {
                     return (
-                      <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                      <table key={index} className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                       <thead
                     className="text-xs text-black uppercase bg-gray-200 "
                     style={{
@@ -291,7 +293,7 @@ const DashboardTab = () => {
                       </thead>
 
                       {allOrder.cartItems.map((items, index) => {
-                        console.log(items);
+                        {/* console.log(items); */}
                         return (
                           <tbody>
                     <tr
@@ -420,7 +422,7 @@ const DashboardTab = () => {
                     </tr>
                   </thead>
                 {user.map((item, index) => {
-                  console.log(item);
+                  {/* console.log(item); */}
                   return(
                   <tbody>
                     <tr
