@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import MyContext from "../../../context/myContext";
-import { MdOutlineProductionQuantityLimits } from "react-icons/md";
+// import { MdOutlineProductionQuantityLimits } from "react-icons/md";
 import { FaUser, FaCartPlus } from "react-icons/fa";
 import { AiFillShopping, AiFillPlusCircle, AiFillDelete } from "react-icons/ai";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
@@ -37,7 +37,7 @@ const DashboardTab = () => {
                   className="font-medium border-b-2 cursor-pointer hover:shadow-purple-700 border-purple-500 text-purple-500 rounded-lg text-xl shadow-[inset_0_0_8px_rgba(0,0,0,0.6)]  px-5 py-1.5 text-center bg-[#605d5d12] "
                 >
                   <div className="flex gap-2 items-center">
-                    <MdOutlineProductionQuantityLimits />
+                    {/* <MdOutlineProductionQuantityLimits /> */}
                     Products
                   </div>
                 </button>
